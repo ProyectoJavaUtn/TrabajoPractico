@@ -1,41 +1,45 @@
 package models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter @Setter
+@Data
+@Table(name = "incidente")
 public class Incidente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;
+
+    @Basic
+    @Column(name = "fechaIncidente")
     private LocalDateTime fechaIncidente;
+
+    @Basic
+    @Column(name = "fechaRevolucionIncidente")
     private LocalDate fechaResolucionIncidente;
-    @ManyToOne
-    private Cliente clienteIncidente;
+
+    @OneToMany
+    @JoinColumn(name = "especialidadIncidente")
+    private Especialidad especialidadIncidente;
+
+    @ManyToMany
+    @JoinTable(
+                name = "incidente_cliente",
+                joinColumns = @JoinColumn(name = "incidente_id"),
+                inverseJoinColumns = @JoinColumn(name = "cliente_id")
+    )
+
+    @Enumerated(EnumType.STRING)
     private Servicios servicioIncidente;
+
+    @Enumerated(EnumType.STRING)
     private EstadosIncidente estado;
+
+    @Basic
     private String feedbackIncidente;
 
-    public Incidente() {
-    }
-
-    public Incidente(LocalDateTime fechaIncidente, EstadosIncidente estado) {
-        this.fechaIncidente = fechaIncidente;
-        this.estado = EstadosIncidente.PENDIENTE;
-    }
-
-    /*
-    public Incidente(Cliente clienteIncidente, Servicios servicioIncidente) {
-
-        fechaIncidente= LocalDateTime.now();
-        estado = EstadosIncidente.PENDIENTE;
-        this.clienteIncidente = clienteIncidente;
-        this.servicioIncidente = servicioIncidente;
-    }
-    */
 }

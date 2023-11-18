@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b72e1a5-942c-46cb-8ffc-38a4a2382597" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Especialidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Especialidad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Incidente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Incidente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Tecnico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +24,8 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
+    &quot;associatedIndex&quot;: 4
+    }</component>
   <component name="ProjectId" id="2YK2ngqdOdrtJNOeZ7tEDUY0sKQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -31,12 +36,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "VirinniMarco",
+    "git-widget-placeholder": "main",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RunManager">
@@ -69,16 +72,5 @@
       <updated>1700260118981</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/App.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
