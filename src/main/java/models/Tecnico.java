@@ -16,9 +16,11 @@ public class Tecnico {
     // private ArrayList<Especialidad> especialidadesTecnico;
     @Basic
     private List<Incidente> incidentesTecnico;
+    private List<Especialidad> especialidadesTecnico;
 
     public Tecnico (){
         this.incidentesTecnico = new ArrayList<Incidente>();
+        this.especialidadesTecnico = new ArrayList<Especialidad>();
     }
 
     public void agregarIncidente (Incidente i){
@@ -26,5 +28,12 @@ public class Tecnico {
     }
     public void quitarIncidente (Incidente i){
         this.incidentesTecnico.remove(i);
+    }
+
+    public void agregarEspecialidad (Especialidad e){
+        this.especialidadesTecnico.add(e);
+    }
+    public void quitarEspecialidad (Especialidad e){
+        this.especialidadesTecnico.remove(e);
     }
 }
