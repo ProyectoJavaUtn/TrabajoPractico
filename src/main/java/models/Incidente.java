@@ -17,6 +17,7 @@ public class Incidente {
     private LocalDate fechaResolucionIncidente;
     @ManyToOne
     private Cliente clienteIncidente;
+    @ManyToMany
     private Servicios servicioIncidente;
     private EstadosIncidente estado;
     private String feedbackIncidente;
@@ -24,12 +25,6 @@ public class Incidente {
     public Incidente() {
     }
 
-    public Incidente(LocalDateTime fechaIncidente, EstadosIncidente estado) {
-        this.fechaIncidente = fechaIncidente;
-        this.estado = EstadosIncidente.PENDIENTE;
-    }
-
-    /*
     public Incidente(Cliente clienteIncidente, Servicios servicioIncidente) {
 
         fechaIncidente= LocalDateTime.now();
@@ -37,5 +32,4 @@ public class Incidente {
         this.clienteIncidente = clienteIncidente;
         this.servicioIncidente = servicioIncidente;
     }
-    */
 }
