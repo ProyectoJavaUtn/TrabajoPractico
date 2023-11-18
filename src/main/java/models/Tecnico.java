@@ -1,15 +1,25 @@
 package models;
 
-import java.util.ArrayList;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Getter @Setter
 public class Tecnico {
-    static int generadorID = 0;
-    private int IDTecnico;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    private long id;
     // private ArrayList<Especialidad> especialidadesTecnico;
-    private ArrayList<Incidente> incidentesTecnico;
+    private List<Incidente> incidentesTecnico;
 
     public Tecnico (){
-        this.IDTecnico = generadorID++;
         this.incidentesTecnico = new ArrayList<Incidente>();
     }
 
@@ -18,12 +28,5 @@ public class Tecnico {
     }
     public void quitarIncidente (Incidente i){
         this.incidentesTecnico.remove(i);
-    }
-    public ArrayList<Incidente> getincidentesTecnico(){
-        return incidentesTecnico;
-    }
-    //Getters y Setters
-    public int getIDTecnico() {
-        return IDTecnico;
     }
 }
