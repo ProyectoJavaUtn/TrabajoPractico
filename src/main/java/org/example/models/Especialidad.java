@@ -15,6 +15,6 @@ public class Especialidad {
     private long id;
 
     @Basic
-    private String nombreEspecialidad;
+    private String nombreEspecialidad, descripcion;
 
 }

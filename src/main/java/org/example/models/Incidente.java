@@ -13,33 +13,22 @@ public class Incidente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;
-
-    @Basic
-    @Column(name = "fechaIncidente")
+    private String titulo;
     private LocalDateTime fechaIncidente;
-
-    @Basic
-    @Column(name = "fechaRevolucionIncidente")
     private LocalDate fechaResolucionIncidente;
-
+    private Servicios servicioIncidente;
     @OneToMany
     @JoinColumn(name = "especialidadIncidente")
     private Especialidad especialidadIncidente;
-
     @ManyToMany
-    @JoinTable(
-                name = "incidente_cliente",
+    @JoinTable( name = "incidente_cliente",
                 joinColumns = @JoinColumn(name = "incidente_id"),
                 inverseJoinColumns = @JoinColumn(name = "cliente_id")
     )
-
-    @Enumerated(EnumType.STRING)
-    private Servicios servicioIncidente;
-
+    private Cliente client;
     @Enumerated(EnumType.STRING)
     private EstadosIncidente estado;
-
-    @Basic
     private String feedbackIncidente;
+
 
 }

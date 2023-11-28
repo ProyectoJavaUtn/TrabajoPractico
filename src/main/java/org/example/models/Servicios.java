@@ -1,7 +1,11 @@
 package org.example.models;
 
-public enum Servicios {
-    SOPORTE_APLICACIONES,
-    SOPORTE_SISTEMAS,
+import java.util.List;
+
+public class Servicios {
+
+    private String nombre, descripcion;
+
+    private List<TipoProblema> tipoProblemaList;
 
 }
