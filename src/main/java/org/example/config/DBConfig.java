@@ -13,4 +13,6 @@ public class DBConfig {
         EntityManager manager = factory.createEntityManager();
         return manager;
     }
+
+
 }

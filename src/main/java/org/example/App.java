@@ -5,16 +5,19 @@ import org.example.models.Cliente;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+=======
+import org.example.models.Especialidad;
+
 
 public class App
 {
     public static void main( String[] args )
     {
-        EntityManager em = DBConfig.getEntityManager();
-        EntityTransaction tx = em.getTransaction();
-        tx.begin();
+        System.out.println( "Hello World!" );
 
         tx.commit();
 
+=======
+        Especialidad especialidad = new Especialidad("asdas", "asdasd");
     }
 }
