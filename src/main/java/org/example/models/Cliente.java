@@ -1,7 +1,4 @@
 package org.example.models;
-
-
-
 import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
@@ -21,6 +18,11 @@ public class Cliente {
     private String razonSocialCliente;
 
     @OneToMany (mappedBy = "cliente")
-    private List<ServicioContratado> serviciosContratados;
+    private List<Servicio> serviciosContratados;
 
+    public Cliente(int CUITCliente, String razonSocialCliente, List<Servicio> serviciosContratados) {
+        this.CUITCliente = CUITCliente;
+        this.razonSocialCliente = razonSocialCliente;
+        this.serviciosContratados = serviciosContratados;
+    }
 }
