@@ -1,7 +1,5 @@
 package org.example.models;
 
-
-
 import lombok.Data;
 
 import javax.persistence.*;
@@ -17,4 +15,8 @@ public class Especialidad {
     @Basic
     private String nombreEspecialidad, descripcion;
 
+    public Especialidad(String nombreEspecialidad, String descripcion) {
+        this.nombreEspecialidad = nombreEspecialidad;
+        this.descripcion = descripcion;
+    }
 }

@@ -8,10 +8,8 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <!-- Clases de entidad -->
-        <class>example.hibernate.pyme.models.Empleado</class>
-        <class>example.hibernate.pyme.models.Direccion</class>
-        <class>example.hibernate.pyme.models.Rol</class>
-        <class>example.hibernate.pyme.models.Sector</class>
+        <!--<class>example.hibernate.pyme.models.Empleado</class>-->
+
         <properties>
             <!-- Propiedades de configuración de Hibernate -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
