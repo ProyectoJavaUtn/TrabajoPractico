@@ -6,7 +6,7 @@ Grupo 1
 Integrantes:
 -Nicolas Cesarini
 -Marcelo Zych
--Maria Victoria Cabrera
+-María Victoria Cabrera
 -Marco Virinni
 -David Daghero
 -Daniel Dragun
