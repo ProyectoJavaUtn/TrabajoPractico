@@ -21,6 +21,6 @@ public class Cliente {
     private String razonSocialCliente;
 
     @OneToMany (mappedBy = "cliente")
-    private List<ServicioContratado> serviciosContratados;
+    private List<ClienteServicio> servicios;
 
 }
