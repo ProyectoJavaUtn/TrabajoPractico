@@ -18,11 +18,11 @@ public class Cliente {
     private String razonSocialCliente;
 
     @OneToMany (mappedBy = "cliente")
-    private List<Servicio> serviciosContratados;
+    private List<ClienteServicio> servicios;
 
-    public Cliente(int CUITCliente, String razonSocialCliente, List<Servicio> serviciosContratados) {
+    public Cliente(int CUITCliente, String razonSocialCliente, List<ClienteServicio> serviciosContratados) {
         this.CUITCliente = CUITCliente;
         this.razonSocialCliente = razonSocialCliente;
-        this.serviciosContratados = serviciosContratados;
+        this.servicios = serviciosContratados;
     }
 }

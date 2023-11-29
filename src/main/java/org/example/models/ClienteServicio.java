@@ -3,12 +3,11 @@ package org.example.models;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Data
-@Table(name = "servicio_contratado")
-public class ServicioContratado {
+@Table(name = "cliente_servicio")
+public class ClienteServicio {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;
@@ -16,4 +15,10 @@ public class ServicioContratado {
     @ManyToOne
     @JoinColumn(name="cliente_id", referencedColumnName="id")
     private Cliente cliente;
+
+    @ManyToOne
+    @JoinColumn(name="servicio_id", referencedColumnName="id")
+    private Servicio servicio;
+
+
 }
