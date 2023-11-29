@@ -6,5 +6,5 @@ public class TipoProblema {
 
     private String nombre, descripcion;
     private int tiempoMaximoDeResolucion;
-    private List<Especialidad> especialidades;
+    /*private List<Especialidad> especialidades;*/
 }

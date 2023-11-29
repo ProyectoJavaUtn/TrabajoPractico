@@ -14,15 +14,13 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;
 
-    @Basic
-    @Column(name = "cuitCliente")
+    @Column(name = "cuit_cliente")
     private int CUITCliente;
 
-    @Basic
-    @Column(name = "razonSocialCliente")
+    @Column(name = "razon_social_cliente")
     private String razonSocialCliente;
 
-    @ManyToMany(mappedBy = "clientes")
-    private List<Servicios> serviciosContratados;
+    @OneToMany (mappedBy = "cliente")
+    private List<ServicioContratado> serviciosContratados;
 
 }

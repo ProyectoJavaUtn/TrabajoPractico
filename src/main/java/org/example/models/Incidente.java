@@ -15,7 +15,7 @@ public class Incidente {
     private long id;
     private String titulo;
     private LocalDateTime fechaIncidente;
-    private LocalDate fechaResolucionIncidente;
+    /*private LocalDate fechaResolucionIncidente;
     private Servicios servicioIncidente;
     @OneToMany
     @JoinColumn(name = "especialidadIncidente")
@@ -28,7 +28,7 @@ public class Incidente {
     private Cliente client;
     @Enumerated(EnumType.STRING)
     private EstadosIncidente estado;
-    private String feedbackIncidente;
+    private String feedbackIncidente;*/
 
 
 }

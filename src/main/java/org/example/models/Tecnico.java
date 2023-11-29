@@ -18,7 +18,7 @@ public class Tecnico {
 
     // private ArrayList<Especialidad> especialidadesTecnico;
     private String nombre, apellido;
-    private LocalDateTime fechaDeNacimiento;
+  /*  private LocalDateTime fechaDeNacimiento;
     private List<Especialidad> especialidads;
     private boolean disponible;
     private List<Incidente> incidentesTecnico;
@@ -34,14 +34,14 @@ public class Tecnico {
     public Tecnico (){
         this.incidentesTecnico = new ArrayList<Incidente>();
 //        this.especialidadesTecnico = new ArrayList<Especialidad>();
-    }
+    }*/
 
-    public void agregarIncidente (Incidente i){
+    /*public void agregarIncidente (Incidente i){
         this.incidentesTecnico.add(i);
     }
     public void quitarIncidente (Incidente i){
         this.incidentesTecnico.remove(i);
-    }
+    }*/
 
 //    public void agregarEspecialidad (Especialidad e){
 //        this.especialidadesTecnico.add(e);
