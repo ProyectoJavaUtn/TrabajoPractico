@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.config.DBConfig;
+import org.example.models.Cliente;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -14,5 +15,6 @@ public class App
         tx.begin();
 
         tx.commit();
+
     }
 }

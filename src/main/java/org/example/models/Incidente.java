@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name = "incidente")
+@Table(name = "INCIDENTE")
 public class Incidente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
