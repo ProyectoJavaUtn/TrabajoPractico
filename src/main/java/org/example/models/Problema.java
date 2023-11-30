@@ -4,22 +4,28 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Data
 public class Problema {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @ManyToOne
+    @JoinColumn(name = "tipo_problema_id")
     private TipoProblema tipoProblema;
-    private LocalDate fechaEstimada, fechaDeResolucion;
-    private List<Integer> horasExtras;
+
+    private LocalDate fechaEstimada;
+    private LocalDate fechaDeResolucion;
+    private Integer horasExtras;
     private String consideraciones;
 
     @ManyToOne
-    @JoinColumn (name = "servicio_id")
+    @JoinColumn(name = "servicio_id")
     private Servicio servicios;
 
+    @ManyToOne
+    @JoinColumn(name = "incidente_id")
+    private Incidente incidente;
 }

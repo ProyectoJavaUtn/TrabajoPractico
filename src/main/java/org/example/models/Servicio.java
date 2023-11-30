@@ -16,11 +16,10 @@ public class Servicio {
     private String nombre;
     private String descripcion;
 
-
-    @OneToMany (mappedBy = "servicios")
+    @OneToMany(mappedBy = "servicios")
     private List<ClienteServicio> clientes;
 
-    @OneToMany (mappedBy = "tipo_problema")
-    private List<TipoProblema> tipoProblemaList;
-
+    @ManyToOne
+    @JoinColumn(name = "tipo_problema_id")
+    private TipoProblema tipoProblema;
 }

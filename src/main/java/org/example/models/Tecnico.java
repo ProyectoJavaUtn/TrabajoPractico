@@ -20,9 +20,26 @@ public class Tecnico {
     private String nombre, apellido;
     private LocalDateTime fechaDeNacimiento;
     private boolean disponible;
-    private List<Incidente> incidentesTecnico;
-    private List<Especialidad> especialidades;
+
+
+
+
+
+    @ManyToMany
+    @JoinTable(
+            name = "tecnico_especialidad",
+            joinColumns = @JoinColumn(name = "tecnico_id"),
+            inverseJoinColumns = @JoinColumn(name = "especialidad_id")
+    )
     private List<Especialidad> especialidadesTecnico;
+
+    @ManyToMany
+    @JoinTable(
+            name = "tecnico_incidente",
+            joinColumns = @JoinColumn(name = "tecnico_id"),
+            inverseJoinColumns = @JoinColumn(name = "incidente_id")
+    )
+    private List<Incidente> incidentesTecnico;
 }
 /*
     @ManyToMany

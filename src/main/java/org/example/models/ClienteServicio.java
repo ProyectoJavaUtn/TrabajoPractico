@@ -23,6 +23,4 @@ public class ClienteServicio {
 
     @OneToMany(mappedBy = "clienteServicio")
     private List<Incidente> incidente;
-
 }
-
