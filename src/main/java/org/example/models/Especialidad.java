@@ -15,7 +15,8 @@ public class Especialidad {
     private long id;
 
     @Basic
-    private String nombreEspecialidad, descripcion;
+    private String nombreEspecialidad;
+    private String descripcion;
 
     @OneToMany (mappedBy = "especialidad")
     private List<TipoProblemaEspecialidad> tipoProblemaEspecialidadList;

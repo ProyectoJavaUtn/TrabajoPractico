@@ -20,4 +20,7 @@ public class Cliente {
     @OneToMany (mappedBy = "clientes")
     private List<ClienteServicio> servicios;
 
+    @OneToMany (mappedBy = "cliente")
+    private List<MensajeNotificacion> mensajesNotificaciones;
+
 }

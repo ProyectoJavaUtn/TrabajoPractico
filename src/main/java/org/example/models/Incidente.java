@@ -17,16 +17,10 @@ public class Incidente {
     private String titulo;
     private LocalDateTime fechaIncidente;
     private LocalDate fechaResolucionIncidente;
-    private Servicio servicioIncidente;
 
-    @Enumerated(EnumType.STRING)
-    private EstadosIncidente estado;
-    private String feedbackIncidente;
-
+    @OneToMany(mappedBy = "incidente")
+    private List<MensajeNotificacion> mensajesNotificacion;
     @ManyToOne
-    @JoinColumn(name = "cliente_servicio_id")
-    private ClienteServicio clienteServicio;
-    @OneToMany (mappedBy = "incidente")
-    private List<Problema> problemas;
-
+    @JoinColumn(name = "servicio_id", referencedColumnName = "servicio_id")
+    private ClienteServicio servicioReportado;
 }

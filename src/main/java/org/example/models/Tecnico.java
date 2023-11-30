@@ -16,14 +16,21 @@ public class Tecnico {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;
 
-    private ArrayList<Especialidad> especialidadesTecnico;
-    private String nombre, apellido;
+
+    private String nombre;
+    private String apellido;
     private LocalDateTime fechaDeNacimiento;
-    private boolean disponible;
-    private List<Especialidad> especialidads;
-    private List<Incidente> incidentesTecnico;
+    @ManyToMany
+    @JoinTable(name = "TECNICO_ESPECIALIDAD",
+            joinColumns = @JoinColumn(name = "especialidad_id"),
+            inverseJoinColumns = @JoinColumn(name = "tecnico_id"))
     private List<Especialidad> especialidades;
-    private List<Especialidad> especialidadesTecnicos;
+    private boolean disponible;
+    @OneToMany(mappedBy = "tecnico")
+    private List<MensajeNotificacion> mensajesNotificaciones;
+    @OneToMany(mappedBy = "tecnico")
+    private List<TiempoResolucionPorTecnicoEstimado> estimacionesTiempo;
+
 }
 
 
