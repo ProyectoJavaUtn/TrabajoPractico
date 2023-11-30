@@ -4,30 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="0b72e1a5-942c-46cb-8ffc-38a4a2382597" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
     <list default="true" id="b3e23802-7028-4e73-9059-683f6daaa08a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/models/TipoProblemaEspecialidad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/ClienteServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/ClienteServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Especialidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Especialidad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Incidente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Incidente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Problema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Problema.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Servicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Servicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Tecnico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/TipoProblema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/TipoProblema.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
->>>>>>> 17dddfd3ab829f6f114dec75672302d5c991443c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="marce" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -42,34 +40,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;marce&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "nicolasCesarini",
-    "last_opened_file_path": "E:/Bibliotecas/Escritorio Argentina Programa/Argentina Programa/UTN Java Intermedio/TrabajoPractico",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
->>>>>>> bcdfc74c52a3d054e91e10586b82c842047602ed
-  }
-}</component>
-=======
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "VirinniMarco"
+    "git-widget-placeholder": "marce"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -77,7 +50,6 @@
       <recent name="org.example.models" />
     </key>
   </component>
->>>>>>> 17dddfd3ab829f6f114dec75672302d5c991443c
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
@@ -95,6 +67,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -109,8 +82,6 @@
     </task>
     <servers />
   </component>
-<<<<<<< HEAD
-=======
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -122,7 +93,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="marce" />
+                        <option value="origin/nicolasCesarini" />
                       </list>
                     </value>
                   </entry>
@@ -137,5 +108,4 @@
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
->>>>>>> bcdfc74c52a3d054e91e10586b82c842047602ed
 </project>
