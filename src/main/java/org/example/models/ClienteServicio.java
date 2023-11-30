@@ -14,7 +14,6 @@ public class ClienteServicio {
 
     @ManyToOne
     @JoinColumn(name="cliente_id", referencedColumnName="id")
-
     private Cliente clientes;
 
     @ManyToOne

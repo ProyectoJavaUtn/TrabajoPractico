@@ -21,12 +21,5 @@ public class Problema {
     private List<Integer> horasExtras;
     private String consideraciones;
 
-    public Problema(Servicio servicios, TipoProblema tipoProblema, LocalDate fechaEstimada, LocalDate fechaDeResolucion, List<Integer> horasExtras, String consideraciones) {
-        this.servicios = servicios;
-        this.tipoProblema = tipoProblema;
-        this.fechaEstimada = fechaEstimada;
-        this.fechaDeResolucion = fechaDeResolucion;
-        this.horasExtras = horasExtras;
-        this.consideraciones = consideraciones;
-    }
+
 }

@@ -14,8 +14,6 @@ public class App
     {
         System.out.println( "Hello World!" );
 
-        Especialidad especialidad = new Especialidad("asdas", "asdasd");
-
-
+        /*Cliente cliente = new Cliente();*/
     }
 }
