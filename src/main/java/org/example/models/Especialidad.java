@@ -1,8 +1,10 @@
 package org.example.models;
 
 import lombok.Data;
+import org.example.config.DBConfig;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -15,8 +17,12 @@ public class Especialidad {
     @Basic
     private String nombreEspecialidad, descripcion;
 
+    @OneToMany (mappedBy = "especialidad")
+    private List<TipoProblemaEspecialidad> tipoProblemaEspecialidadList;
+
+
     public Especialidad(String nombreEspecialidad, String descripcion) {
-        this.nombreEspecialidad = nombreEspecialidad;
-        this.descripcion = descripcion;
+        this.nombreEspecialidad= nombreEspecialidad;
+        this.descripcion= descripcion;
     }
 }

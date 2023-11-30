@@ -1,10 +1,20 @@
 package org.example.models;
 
+import lombok.Data;
+
+import javax.persistence.*;
 import java.util.List;
 
-public class TipoProblema {
 
+@Entity
+@Data
+public class TipoProblema {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    private long id;
     private String nombre, descripcion;
     private int tiempoMaximoDeResolucion;
-    /*private List<Especialidad> especialidades;*/
+
+    @OneToMany (mappedBy = "tipoProblema")
+    private List <TipoProblemaEspecialidad> tipoProblemaEspecialidadList;
 }

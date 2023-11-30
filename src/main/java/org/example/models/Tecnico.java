@@ -1,5 +1,6 @@
 package org.example.models;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,8 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
+@Data
 public class Tecnico {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -18,12 +18,13 @@ public class Tecnico {
 
     // private ArrayList<Especialidad> especialidadesTecnico;
     private String nombre, apellido;
-  /*  private LocalDateTime fechaDeNacimiento;
-    private List<Especialidad> especialidads;
+    private LocalDateTime fechaDeNacimiento;
     private boolean disponible;
     private List<Incidente> incidentesTecnico;
+    private List<Especialidad> especialidades;
     private List<Especialidad> especialidadesTecnico;
-
+}
+/*
     @ManyToMany
     @JoinTable( name = "incidente_tecnico",
             joinColumns = @JoinColumn(name = "incidente_id"),
@@ -49,4 +50,3 @@ public class Tecnico {
 //    public void quitarEspecialidad (Especialidad e){
 //        this.especialidadesTecnico.remove(e);
 //    }
-}
