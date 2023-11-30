@@ -3,6 +3,7 @@ package org.example.models;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -22,7 +23,11 @@ public class ClienteServicio {
     private Servicio servicios;
 
     @OneToMany(mappedBy = "servicioReportado")
-    private List<Incidente> incidentess;
+    private List<Incidente> incidentes;
+
+    private LocalDateTime fechaAlta;
+
+    private int pagoMensual;
 
 
 }

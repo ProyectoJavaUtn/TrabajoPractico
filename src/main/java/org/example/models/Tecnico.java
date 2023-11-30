@@ -17,12 +17,19 @@ public class Tecnico {
     private long id;
 
     // private ArrayList<Especialidad> especialidadesTecnico;
-    private String nombre, apellido;
+    private String nombre;
+    private String apellido;
     private LocalDateTime fechaDeNacimiento;
-    //private List<Especialidad> especialidads;
+    @ManyToMany
+    @JoinTable(name = "TECNICO_ESPECIALIDAD",
+            joinColumns = @JoinColumn(name = "especialidad_id"),
+            inverseJoinColumns = @JoinColumn(name = "tecnico_id"))
+    private List<Especialidad> especialidades;
     private boolean disponible;
     @OneToMany(mappedBy = "tecnico")
     private List<MensajeNotificacion> mensajesNotificaciones;
+    @OneToMany(mappedBy = "tecnico")
+    private List<TiempoResolucionPorTecnicoEstimado> estimacionesTiempo;
     /*private List<Incidente> incidentesTecnico;
     private List<Especialidad> especialidadesTecnico;
 
