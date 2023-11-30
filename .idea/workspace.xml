@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0b72e1a5-942c-46cb-8ffc-38a4a2382597" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +48,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "VirinniMarco",
     "last_opened_file_path": "D:/Java",
+=======
+    "git-widget-placeholder": "nicolasCesarini",
+    "last_opened_file_path": "E:/Bibliotecas/Escritorio Argentina Programa/Argentina Programa/UTN Java Intermedio/TrabajoPractico",
+>>>>>>> bcdfc74c52a3d054e91e10586b82c842047602ed
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -113,5 +120,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

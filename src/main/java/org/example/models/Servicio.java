@@ -17,10 +17,8 @@ public class Servicio {
     private String descripcion;
 
     /*private List<TipoProblema> tipoProblemaList;*/
-
-    @OneToMany (mappedBy = "servicio")
-    private List<ClienteServicio> cliente;
-
+    @OneToMany (mappedBy = "servicios")
+    private List<ClienteServicio> clientes;
 
     /*@ManyToMany
     @JoinTable(
