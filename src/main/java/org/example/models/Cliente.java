@@ -17,13 +17,7 @@ public class Cliente {
     @Column(name = "razon_social_cliente")
     private String razonSocialCliente;
 
-
     @OneToMany (mappedBy = "clientes")
     private List<ClienteServicio> servicios;
 
-    public Cliente(int CUITCliente, String razonSocialCliente, List<ClienteServicio> serviciosContratados) {
-        this.CUITCliente = CUITCliente;
-        this.razonSocialCliente = razonSocialCliente;
-        this.servicios = serviciosContratados;
-    }
 }

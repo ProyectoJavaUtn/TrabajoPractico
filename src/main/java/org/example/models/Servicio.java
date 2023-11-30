@@ -14,20 +14,13 @@ public class Servicio {
     private long id;
 
     private String nombre;
+
     private String descripcion;
 
-    /*private List<TipoProblema> tipoProblemaList;*/
-
+    @OneToMany (mappedBy = "servicios")
     private List<ClienteServicio> clientes;
 
-    /*@ManyToMany
-    @JoinTable(
-            name="cliente_servicio",
-            joinColumns = @JoinColumn(name= "servicio_id"),
-            inverseJoinColumns = @JoinColumn(name = "cliente_id")
-    )
-    List<Cliente> clientes;*/
-
-
+    @OneToMany (mappedBy = "tipo_problema")
+    private List<TipoProblema> tipoProblemaList;
 
 }
