@@ -18,9 +18,7 @@ public class Servicio {
 
     /*private List<TipoProblema> tipoProblemaList;*/
 
-    @OneToMany (mappedBy = "servicio")
-    private List<ClienteServicio> cliente;
-
+    private List<ClienteServicio> clientes;
 
     /*@ManyToMany
     @JoinTable(

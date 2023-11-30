@@ -17,7 +17,8 @@ public class Cliente {
     @Column(name = "razon_social_cliente")
     private String razonSocialCliente;
 
-    @OneToMany (mappedBy = "cliente")
+
+    @OneToMany (mappedBy = "clientes")
     private List<ClienteServicio> servicios;
 
     public Cliente(int CUITCliente, String razonSocialCliente, List<ClienteServicio> serviciosContratados) {

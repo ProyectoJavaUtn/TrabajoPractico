@@ -14,11 +14,10 @@ public class ClienteServicio {
 
     @ManyToOne
     @JoinColumn(name="cliente_id", referencedColumnName="id")
-    private Cliente cliente;
+
+    private Cliente clientes;
 
     @ManyToOne
     @JoinColumn(name="servicio_id", referencedColumnName="id")
-    private Servicio servicio;
-
-
+    private Servicio servicios;
 }
