@@ -18,10 +18,12 @@ public class Tecnico {
 
     // private ArrayList<Especialidad> especialidadesTecnico;
     private String nombre, apellido;
-  /*  private LocalDateTime fechaDeNacimiento;
-    private List<Especialidad> especialidads;
+    private LocalDateTime fechaDeNacimiento;
+    //private List<Especialidad> especialidads;
     private boolean disponible;
-    private List<Incidente> incidentesTecnico;
+    @OneToMany(mappedBy = "tecnico")
+    private List<MensajeNotificacion> mensajesNotificaciones;
+    /*private List<Incidente> incidentesTecnico;
     private List<Especialidad> especialidadesTecnico;
 
     @ManyToMany

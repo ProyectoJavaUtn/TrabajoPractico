@@ -3,6 +3,7 @@ package org.example.models;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -19,6 +20,9 @@ public class ClienteServicio {
     @ManyToOne
     @JoinColumn(name="servicio_id", referencedColumnName="id")
     private Servicio servicios;
+
+    @OneToMany(mappedBy = "servicioReportado")
+    private List<Incidente> incidentess;
 
 
 }
