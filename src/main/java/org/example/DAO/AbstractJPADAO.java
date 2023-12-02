@@ -8,45 +8,52 @@ import java.io.Serializable;
 import java.util.List;
 
 public abstract class AbstractJPADAO<T extends Serializable> {
-    private Class< T > unaClase;
-    public void setClase( Class< T > claseASetear ){
+    private Class<T> unaClase;
+    EntityManager entityManager = null;
+
+    public void setClase(Class<T> claseASetear) {
         this.unaClase = claseASetear;
     }
 
-    EntityManager entityManager = null;
-
-    public T findOne( int id ){
+    public T findOne(int id) {
         entityManager = DBConfig.getEntityManager();
-        return entityManager.find( unaClase, id );
-    }
-    public List< T > findAll(){
-        entityManager = DBConfig.getEntityManager();
-        return entityManager.createQuery( "from " + unaClase.getName()).getResultList();
+        return entityManager.find(unaClase, id);
     }
 
-    public void create( T entity ){
+    public T getById(long id) {
+        entityManager = DBConfig.getEntityManager();
+        T entity = entityManager.find(unaClase, id);
+        entityManager.close();
+        return entity;
+    }
+
+    public List<T> findAll() {
+        entityManager = DBConfig.getEntityManager();
+        return entityManager.createQuery("from " + unaClase.getName(), unaClase).getResultList();
+    }
+
+    public void create(T entity) {
         entityManager = DBConfig.getEntityManager();
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
-            entityManager.persist( entity );
+        entityManager.persist(entity);
         tx.commit();
     }
 
-    public T update( T entity ){
+    public T update(T entity) {
         entityManager = DBConfig.getEntityManager();
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
-            T entityMerged = entityManager.merge( entity );
+        T entityMerged = entityManager.merge(entity);
         tx.commit();
         return entityMerged;
     }
 
-    public void delete( T entity ){
+    public void delete(T entity) {
         entityManager = DBConfig.getEntityManager();
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
-            entityManager.remove( entity );
+        entityManager.remove(entity);
         tx.commit();
     }
-
 }

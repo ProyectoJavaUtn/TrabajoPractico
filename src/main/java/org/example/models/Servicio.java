@@ -18,14 +18,6 @@ public class Servicio implements Serializable {
     private String nombre;
     private String descripcion;
 
-<<<<<<< HEAD
-
-    @OneToMany (mappedBy = "servicios")
-    private List<ClienteServicio> clientes;
-
-    @OneToMany (mappedBy = "tipo_problema")
-    private List<TipoProblema> tipoProblemaList;
-=======
     @OneToMany (mappedBy = "servicios")
     private List<ClienteServicio> clientes;
 
@@ -38,6 +30,5 @@ public class Servicio implements Serializable {
     }
 
 
->>>>>>> ee9d27b84a3cce146df2fee1ac0375d20c1f0b03
 
 }
