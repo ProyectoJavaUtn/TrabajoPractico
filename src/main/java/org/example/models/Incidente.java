@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -23,19 +24,10 @@ public class Incidente implements Serializable {
     @ManyToOne
     @JoinColumn(name = "servicio_id", referencedColumnName = "servicio_id")
     private ClienteServicio servicioReportado;
-    /*
-    @OneToMany
-    @JoinColumn(name = "especialidadIncidente")
-    private Especialidad especialidadIncidente;
-    @ManyToMany
-    @JoinTable( name = "incidente_cliente",
-                joinColumns = @JoinColumn(name = "incidente_id"),
-                inverseJoinColumns = @JoinColumn(name = "cliente_id")
-    )
-    private Cliente client;
-    @Enumerated(EnumType.STRING)
-    private EstadosIncidente estado;
-    private String feedbackIncidente;*/
+
+    public Incidente() {
+        this.mensajesNotificacion = new ArrayList<MensajeNotificacion>();
+    }
 
 
 }

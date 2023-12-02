@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -25,4 +26,10 @@ public class TipoProblema implements Serializable {
     private List<TiempoResolucionPorTecnicoEstimado> tiempoResolucionPorTecnicoEstimado;
     @OneToMany(mappedBy = "tipoProblema")
     private List<Problema> problemas;
+
+    public TipoProblema() {
+        this.especialidades = new ArrayList<Especialidad>();
+        this.tiempoResolucionPorTecnicoEstimado = new ArrayList<TiempoResolucionPorTecnicoEstimado>();
+        this.problemas = new ArrayList<Problema>();
+    }
 }

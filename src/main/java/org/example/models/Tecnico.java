@@ -31,32 +31,10 @@ public class Tecnico implements Serializable {
     private List<MensajeNotificacion> mensajesNotificaciones;
     @OneToMany(mappedBy = "tecnico")
     private List<TiempoResolucionPorTecnicoEstimado> estimacionesTiempo;
-    /*private List<Incidente> incidentesTecnico;
-    private List<Especialidad> especialidadesTecnico;
 
-    @ManyToMany
-    @JoinTable( name = "incidente_tecnico",
-            joinColumns = @JoinColumn(name = "incidente_id"),
-            inverseJoinColumns = @JoinColumn(name = "tecnico_id")
-    )
-    private Incidente incidente;
-
-    public Tecnico (){
-        this.incidentesTecnico = new ArrayList<Incidente>();
-//        this.especialidadesTecnico = new ArrayList<Especialidad>();
-    }*/
-
-    /*public void agregarIncidente (Incidente i){
-        this.incidentesTecnico.add(i);
+    public Tecnico() {
+        this.especialidades = new ArrayList<Especialidad>();
+        this.mensajesNotificaciones = new ArrayList<MensajeNotificacion>();
+        this.estimacionesTiempo = new ArrayList<TiempoResolucionPorTecnicoEstimado>();
     }
-    public void quitarIncidente (Incidente i){
-        this.incidentesTecnico.remove(i);
-    }*/
-
-//    public void agregarEspecialidad (Especialidad e){
-//        this.especialidadesTecnico.add(e);
-//    }
-//    public void quitarEspecialidad (Especialidad e){
-//        this.especialidadesTecnico.remove(e);
-//    }
 }

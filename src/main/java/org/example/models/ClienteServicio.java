@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -29,6 +30,10 @@ public class ClienteServicio implements Serializable {
     private LocalDateTime fechaAlta;
 
     private int pagoMensual;
+
+    public ClienteServicio() {
+        this.incidentes = new ArrayList<Incidente>();
+    }
 
 
 }

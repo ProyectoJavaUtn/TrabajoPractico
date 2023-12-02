@@ -5,6 +5,7 @@ package org.example.models;
 import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -26,5 +27,10 @@ public class Cliente implements Serializable {
 
     @OneToMany (mappedBy = "cliente")
     private List<MensajeNotificacion> mensajesNotificaciones;
+
+    public Cliente() {
+        this.servicios = new ArrayList<ClienteServicio>();
+        this.mensajesNotificaciones = new ArrayList<MensajeNotificacion>();
+    }
 
 }
