@@ -4,12 +4,13 @@ package org.example.models;
 
 import lombok.Data;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Data
 @Table(name = "cliente")
-public class Cliente {
+public class Cliente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;

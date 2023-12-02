@@ -3,13 +3,14 @@ package org.example.models;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
 @Data
 @Table(name = "cliente_servicio")
-public class ClienteServicio {
+public class ClienteServicio implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;

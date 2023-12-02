@@ -3,11 +3,12 @@ package org.example.models;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Data
-public class TipoProblema {
+public class TipoProblema implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;
@@ -22,4 +23,6 @@ public class TipoProblema {
     private List<Especialidad> especialidades;
     @OneToMany(mappedBy = "tipoProblema")
     private List<TiempoResolucionPorTecnicoEstimado> tiempoResolucionPorTecnicoEstimado;
+    @OneToMany(mappedBy = "tipoProblema")
+    private List<Problema> problemas;
 }

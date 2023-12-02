@@ -3,12 +3,13 @@ package org.example.models;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Data
 @Table(name = "mensaje_notificacion")
-public class MensajeNotificacion {
+public class MensajeNotificacion implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;

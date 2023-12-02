@@ -3,10 +3,11 @@ package org.example.models;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Data
-public class TiempoResolucionPorTecnicoEstimado {
+public class TiempoResolucionPorTecnicoEstimado implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;
