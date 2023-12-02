@@ -4,16 +4,33 @@ import org.example.config.DBConfig;
 import org.example.models.Cliente;
 import org.example.models.Especialidad;
 import org.example.models.Tecnico;
+import org.example.repository.ClienteRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import org.example.models.Especialidad;
-import java.util.ArrayList;
 
 
 public class App
 {
+
+
     public static void main( String[] args )
+    {
+        Cliente pepito = new Cliente();
+        pepito.setCUITCliente(555);
+        pepito.setRazonSocialCliente("aaaaa");
+        ClienteRepository cliente = new ClienteRepository();
+        cliente.create(pepito);
+        Cliente luisito = new Cliente();
+        luisito.setCUITCliente(777);
+        luisito.setRazonSocialCliente("bbbb");
+        cliente.create(luisito);
+
+        //clienteDAO.create(pepito);
+       /* clienteDAO.create(luisito);*/
+    }
+
+    public static void inicializacion()
     {
         EntityManager em = DBConfig.getEntityManager();
         EntityTransaction tx = em.getTransaction();

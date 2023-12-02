@@ -10,20 +10,31 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+import javax.persistence.*;
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
 @Entity
 @Data
-public class Problema {
-
+public class Problema implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @ManyToOne
+    @JoinColumn(name = "tipo_problema_id")
     private TipoProblema tipoProblema;
-    private LocalDate fechaEstimada, fechaDeResolucion;
-    private List<Integer> horasExtras;
+
+    private LocalDateTime fechaEstimada;
+    private LocalDateTime fechaDeResolucion;
+    private Integer horasExtras;
     private String consideraciones;
 
     @ManyToOne
-    @JoinColumn (name = "servicio_id")
-    private Servicio servicios;
+    @JoinColumn(name = "servicio_id")
+    private Servicio servicio;
 
+    @ManyToOne
+    @JoinColumn(name = "incidente_id")
+    private Incidente incidente;
 }

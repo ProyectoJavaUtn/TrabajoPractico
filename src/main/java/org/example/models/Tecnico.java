@@ -5,13 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Data
-public class Tecnico {
+public class Tecnico implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;
@@ -31,6 +32,11 @@ public class Tecnico {
     @OneToMany(mappedBy = "tecnico")
     private List<TiempoResolucionPorTecnicoEstimado> estimacionesTiempo;
 
+    public Tecnico() {
+        this.especialidades = new ArrayList<Especialidad>();
+        this.mensajesNotificaciones = new ArrayList<MensajeNotificacion>();
+        this.estimacionesTiempo = new ArrayList<TiempoResolucionPorTecnicoEstimado>();
+    }
 }
 
 

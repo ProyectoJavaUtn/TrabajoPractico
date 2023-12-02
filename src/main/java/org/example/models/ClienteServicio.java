@@ -3,14 +3,15 @@ package org.example.models;
 import lombok.Data;
 
 import javax.persistence.*;
-
+import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Data
 @Table(name = "cliente_servicio")
-public class ClienteServicio {
+public class ClienteServicio implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;
@@ -32,4 +33,10 @@ public class ClienteServicio {
 
     @OneToMany(mappedBy = "servicioReportado")
     private List<Incidente> incidentes;
+
+    public ClienteServicio() {
+        this.incidentes = new ArrayList<Incidente>();
+    }
+
+
 }

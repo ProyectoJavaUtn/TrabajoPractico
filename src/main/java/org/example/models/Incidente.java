@@ -3,14 +3,16 @@ package org.example.models;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Data
-@Table(name = "INCIDENTE")
-public class Incidente {
+@Table(name = "incidente")
+public class Incidente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private long id;
@@ -23,4 +25,11 @@ public class Incidente {
     @ManyToOne
     @JoinColumn(name = "servicio_id", referencedColumnName = "servicio_id")
     private ClienteServicio servicioReportado;
+
+
+    public Incidente() {
+        this.mensajesNotificacion = new ArrayList<MensajeNotificacion>();
+    }
+
+
 }

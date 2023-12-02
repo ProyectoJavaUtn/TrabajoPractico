@@ -4,11 +4,12 @@ import lombok.Data;
 import org.example.config.DBConfig;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.*;
+import java.io.Serializable;
 
 @Entity
 @Data
-public class Especialidad {
+public class Especialidad implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
