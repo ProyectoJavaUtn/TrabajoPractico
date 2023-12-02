@@ -14,7 +14,7 @@ import java.util.List;
 public class Cliente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    private long id;
+    private int id;
 
     @Column(name = "cuit_cliente")
     private int CUITCliente;
