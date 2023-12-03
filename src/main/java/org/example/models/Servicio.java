@@ -32,6 +32,8 @@ public class Servicio implements Serializable {
     public Servicio(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.clientes = new ArrayList<ClienteServicio>();
+        this.problemas = new ArrayList<Problema>();
     }
 
     public void addCliente(ClienteServicio cliente){
@@ -40,6 +42,7 @@ public class Servicio implements Serializable {
     }
 
     public void addProblema(Problema problema){
+        problema.setServicio(this);
         this.problemas.add(problema);
     }
 }

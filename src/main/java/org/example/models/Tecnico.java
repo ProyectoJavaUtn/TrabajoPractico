@@ -43,6 +43,9 @@ public class Tecnico implements Serializable {
         this.apellido = apellido;
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.disponible = disponible;
+        this.especialidades = new ArrayList<Especialidad>();
+        this.mensajesNotificaciones = new ArrayList<MensajeNotificacion>();
+        this.estimacionesTiempo = new ArrayList<TiempoResolucionPorTecnicoEstimado>();
     }
 
     public void addEspecialidad(Especialidad especialidad){
