@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Data
 public class TiempoResolucionPorTecnicoEstimado implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne

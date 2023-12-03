@@ -12,7 +12,7 @@ import java.util.List;
 @Table(name = "servicio")
 public class Servicio implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String nombre;

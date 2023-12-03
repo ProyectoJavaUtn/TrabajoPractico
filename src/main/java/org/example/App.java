@@ -74,24 +74,28 @@ public class App {
         TipoProblema tipoProblema1 = new TipoProblema("TipoProblema1", "Descripción1", 5);
         TipoProblema tipoProblema2 = new TipoProblema("TipoProblema2", "Descripción2", 8);
 
+        // Asociar TipoProblema con Especialidad
+        tipoProblema1.addEspecialidad(especialidad1);
+        tipoProblema2.addEspecialidad(especialidad2);
+
         // Crear instancias de Servicio
-        Servicio servicio3 = new Servicio("Servicio3", "Descripción3");
-        Servicio servicio4 = new Servicio("Servicio4", "Descripción4");
+        Servicio servicio1 = new Servicio("Servicio3", "Descripción3");
+        Servicio servicio2 = new Servicio("Servicio4", "Descripción4");
 
         problema1.setTipoProblema(tipoProblema1);
-        problema1.setServicio(servicio3);
+        problema1.setServicio(servicio1);
         problema1.setIncidente(incidente1);
 
         problema2.setTipoProblema(tipoProblema2);
-        problema2.setServicio(servicio4);
+        problema2.setServicio(servicio2);
         problema2.setIncidente(incidente2);
 
         // Asociar Servicio con ClienteServicio y Problema
-        servicio3.addCliente(clienteServicio1);
-        servicio4.addCliente(clienteServicio2);
+        servicio1.addCliente(clienteServicio1);
+        servicio2.addCliente(clienteServicio2);
 
-        servicio3.addProblema(problema1);
-        servicio4.addProblema(problema2);
+        servicio1.addProblema(problema1);
+        servicio2.addProblema(problema2);
 
         // Crear instancias de Tecnico
         Tecnico tecnico1 = new Tecnico("Técnico1", "Apellido1", LocalDateTime.now().minusYears(25), true);
@@ -100,6 +104,10 @@ public class App {
         // Asociar Tecnico con Especialidad
         tecnico1.addEspecialidad(especialidad1);
         tecnico2.addEspecialidad(especialidad2);
+
+        // Asociar Tecnico con MensajeNotificacion
+        tecnico1.addMensajeNotificacion(mensaje1);
+        tecnico2.addMensajeNotificacion(mensaje2);
 
         // Crear instancias de TiempoResolucionPorTecnicoEstimado
         TiempoResolucionPorTecnicoEstimado tiempoEstimado1 = new TiempoResolucionPorTecnicoEstimado(4);
@@ -113,7 +121,70 @@ public class App {
         tiempoEstimado2.setTecnico(tecnico2);
 
         // Guardar en los repositorios
+
+        /*    EstadosIncidente (si es necesario)
+    Especialidad
+    TipoProblema
+
+Guarda las entidades que dependen de otras que ya están almacenadas:
+
+    Cliente
+    Tecnico (ya que tiene una relación con Especialidad)
+
+Guarda las entidades que dependen de las anteriores:
+
+    ClienteServicio
+    Servicio
+    Incidente
+    Problema
+    TiempoResolucionPorTecnicoEstimado
+    MensajeNotificacion*/
+
+        especialidadRepository.create(especialidad1);
+        especialidadRepository.create(especialidad2);
+
+        tecnicoRepository.create(tecnico1);
+        tecnicoRepository.create(tecnico2);
+
+        tipoProblemaRepository.create(tipoProblema1);
+        tipoProblemaRepository.create(tipoProblema2);
+
+        tiempoResolucionRepository.create(tiempoEstimado1);
+        tiempoResolucionRepository.create(tiempoEstimado2);
+
         clienteRepository.create(cliente1);
+        clienteRepository.create(cliente2);
+
+        servicioRepository.create(servicio1);
+        servicioRepository.create(servicio2);
+
+        clienteServicioRepository.create(clienteServicio1);
+        clienteServicioRepository.create(clienteServicio2);
+
+        incidenteRepository.create(incidente1);
+        incidenteRepository.create(incidente2);
+
+        problemaRepository.create(problema1);
+        problemaRepository.create(problema2);
+
+        mensajeNotificacionRepository.create(mensaje1);
+        mensajeNotificacionRepository.create(mensaje2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*clienteRepository.create(cliente1);
         clienteRepository.create(cliente2);
 
         clienteServicioRepository.create(clienteServicio1);
@@ -128,8 +199,8 @@ public class App {
         mensajeNotificacionRepository.create(mensaje1);
         mensajeNotificacionRepository.create(mensaje2);
 
-        servicioRepository.create(servicio3);
-        servicioRepository.create(servicio4);
+        servicioRepository.create(servicio1);
+        servicioRepository.create(servicio2);
 
         tipoProblemaRepository.create(tipoProblema1);
         tipoProblemaRepository.create(tipoProblema2);
@@ -138,12 +209,11 @@ public class App {
         problemaRepository.create(problema2);
 
 
-
         tecnicoRepository.create(tecnico1);
         tecnicoRepository.create(tecnico2);
 
         tiempoResolucionRepository.create(tiempoEstimado1);
-        tiempoResolucionRepository.create(tiempoEstimado2);
+        tiempoResolucionRepository.create(tiempoEstimado2);*/
 
 
     }

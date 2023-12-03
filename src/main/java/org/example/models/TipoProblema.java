@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 public class TipoProblema implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String nombre;
@@ -19,8 +19,8 @@ public class TipoProblema implements Serializable {
     private int tiempoMaximoDeResolucion;
     @ManyToMany
     @JoinTable(name = "TIPOPROBLEMA_ESPECIALIDAD",
-            joinColumns = @JoinColumn(name = "especialidad_id"),
-            inverseJoinColumns = @JoinColumn(name = "tipoProblema_id"))
+            joinColumns = @JoinColumn(name = "tipoProblema_id"),
+            inverseJoinColumns = @JoinColumn(name = "especialidad_id"))
     private List<Especialidad> especialidades;
     @OneToMany(mappedBy = "tipoProblema")
     private List<TiempoResolucionPorTecnicoEstimado> tiempoResolucionPorTecnicoEstimado;

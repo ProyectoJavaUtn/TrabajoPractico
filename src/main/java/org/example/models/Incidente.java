@@ -14,7 +14,7 @@ import java.util.List;
 @Table(name = "incidente")
 public class Incidente implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String titulo;
     private LocalDateTime fechaIncidente;
