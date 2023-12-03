@@ -29,4 +29,8 @@ public class Problema implements Serializable {
     @ManyToOne
     @JoinColumn(name = "incidente_id")
     private Incidente incidente;
+
+
+    @Enumerated(EnumType.STRING)
+    private EstadoIncidente estado;
 }

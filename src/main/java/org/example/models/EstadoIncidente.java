@@ -1,6 +1,6 @@
 package org.example.models;
 
-public enum EstadosIncidente {
+public enum EstadoIncidente {
     ABIERTO,
     RESUELTO,
     EN_PROCESO

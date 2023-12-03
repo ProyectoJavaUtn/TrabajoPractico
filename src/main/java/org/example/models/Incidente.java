@@ -14,25 +14,29 @@ import java.util.List;
 @Table(name = "incidente")
 public class Incidente implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String titulo;
     private LocalDateTime fechaIncidente;
     private LocalDate fechaResolucionIncidente;
-    @OneToMany(mappedBy = "incidente")
+    @OneToMany (mappedBy = "incidente")
     private List<MensajeNotificacion> mensajesNotificacion;
     @ManyToOne
     @JoinColumn(name = "servicio_id", referencedColumnName = "servicio_id")
     private ClienteServicio servicioReportado;
-    @ManyToOne
-    @JoinColumn(name = "tecnico_id", referencedColumnName = "id")
-    private Tecnico tecnico;
 
+    @Enumerated(EnumType.STRING)
+    private EstadoIncidente estado;
     public Incidente() {
-        this.mensajesNotificacion = new ArrayList<>();
+        this.mensajesNotificacion = new ArrayList<MensajeNotificacion>();
     }
 
-    public void setTecnico(Tecnico tecnico) {
-        this.tecnico = tecnico;
+    public Incidente(String titulo, LocalDateTime fechaIncidente, LocalDate fechaResolucionIncidente) {
+        this.titulo = titulo;
+        this.fechaIncidente = fechaIncidente;
+        this.fechaResolucionIncidente = fechaResolucionIncidente;
+        this.mensajesNotificacion = new ArrayList<MensajeNotificacion>();
+        //this.servicioReportado = servicioReportado;
+        this.estado = EstadoIncidente.ABIERTO;
     }
 }

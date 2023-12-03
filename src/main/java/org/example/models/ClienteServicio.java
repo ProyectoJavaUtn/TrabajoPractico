@@ -13,7 +13,7 @@ import java.util.List;
 @Table(name = "cliente_servicio")
 public class ClienteServicio implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne

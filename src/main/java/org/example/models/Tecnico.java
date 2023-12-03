@@ -1,6 +1,5 @@
 package org.example.models;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,13 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Tecnico implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private ArrayList<Especialidad> especialidadesTecnico;
+    // private ArrayList<Especialidad> especialidadesTecnico;
     private String nombre;
     private String apellido;
     private LocalDateTime fechaDeNacimiento;

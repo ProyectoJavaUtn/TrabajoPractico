@@ -11,7 +11,7 @@ import java.util.List;
 @Table(name = "mensaje_notificacion")
 public class MensajeNotificacion implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String tituloDeMensaje;

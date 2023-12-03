@@ -11,7 +11,7 @@ import java.util.List;
     @Data
     public class TipoProblema implements Serializable {
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
 
         private String nombre;
