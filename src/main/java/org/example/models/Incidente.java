@@ -29,5 +29,15 @@ public class Incidente implements Serializable {
         this.mensajesNotificacion = new ArrayList<MensajeNotificacion>();
     }
 
+    public Incidente(String titulo, LocalDateTime fechaIncidente, LocalDate fechaResolucionIncidente) {
+        this.titulo = titulo;
+        this.fechaIncidente = fechaIncidente;
+        this.fechaResolucionIncidente = fechaResolucionIncidente;
+        this.mensajesNotificacion = new ArrayList<MensajeNotificacion>();
+    }
+
+    public void addMensajeNotificacion(MensajeNotificacion mensaje){
+        this.mensajesNotificacion.add(mensaje);
+    }
 
 }

@@ -21,4 +21,8 @@ public class TiempoResolucionPorTecnicoEstimado implements Serializable {
     private Tecnico tecnico;
 
     private int horasResolucion;
+
+    public TiempoResolucionPorTecnicoEstimado(int horasResolucion) {
+        this.horasResolucion = horasResolucion;
+    }
 }

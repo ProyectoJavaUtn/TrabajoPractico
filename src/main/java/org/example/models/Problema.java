@@ -29,4 +29,11 @@ public class Problema implements Serializable {
     @ManyToOne
     @JoinColumn(name = "incidente_id")
     private Incidente incidente;
+
+    public Problema(LocalDateTime fechaEstimada, LocalDateTime fechaDeResolucion, Integer horasExtras, String consideraciones) {
+        this.fechaEstimada = fechaEstimada;
+        this.fechaDeResolucion = fechaDeResolucion;
+        this.horasExtras = horasExtras;
+        this.consideraciones = consideraciones;
+    }
 }

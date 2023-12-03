@@ -32,4 +32,22 @@ public class TipoProblema implements Serializable {
         this.tiempoResolucionPorTecnicoEstimado = new ArrayList<TiempoResolucionPorTecnicoEstimado>();
         this.problemas = new ArrayList<Problema>();
     }
+
+    public TipoProblema(String nombre, String descripcion, int tiempoMaximoDeResolucion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.tiempoMaximoDeResolucion = tiempoMaximoDeResolucion;
+    }
+
+    public void addEspecialidad(Especialidad especialidad){
+        this.especialidades.add(especialidad);
+    }
+
+    public void addTiempoResolucionPorTecnicoEstimado(TiempoResolucionPorTecnicoEstimado tiempoEstimado){
+        this.tiempoResolucionPorTecnicoEstimado.add(tiempoEstimado);
+    }
+
+    public void addProblema(Problema problema){
+        this.problemas.add(problema);
+    }
 }

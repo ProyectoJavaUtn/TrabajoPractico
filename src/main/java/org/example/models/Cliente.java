@@ -49,6 +49,7 @@ public class Cliente implements Serializable {
     }
 
     public void addMensajeNotificacion(MensajeNotificacion mensajeNotificacion){
+        mensajeNotificacion.setCliente(this);
         this.mensajesNotificaciones.add(mensajeNotificacion);
     }
 

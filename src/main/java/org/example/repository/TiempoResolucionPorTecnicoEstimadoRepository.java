@@ -1,8 +1,6 @@
 package org.example.repository;
 
-import org.example.DAO.TecnicoDAO;
 import org.example.DAO.TiempoResolucionPorTecnicoEstimadoDAO;
-import org.example.models.Tecnico;
 import org.example.models.TiempoResolucionPorTecnicoEstimado;
 
 public class TiempoResolucionPorTecnicoEstimadoRepository {

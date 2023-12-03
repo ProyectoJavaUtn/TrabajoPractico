@@ -18,10 +18,10 @@ public class Servicio implements Serializable {
     private String nombre;
     private String descripcion;
 
-    @OneToMany (mappedBy = "servicios")
+    @OneToMany(mappedBy = "servicios")
     private List<ClienteServicio> clientes;
 
-    @OneToMany (mappedBy = "servicio")
+    @OneToMany(mappedBy = "servicio")
     private List<Problema> problemas;
 
     public Servicio() {
@@ -29,6 +29,16 @@ public class Servicio implements Serializable {
         this.problemas = new ArrayList<Problema>();
     }
 
+    public Servicio(String nombre, String descripcion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
 
+    public void addCliente(ClienteServicio cliente){
+        this.clientes.add(cliente);
+    }
 
+    public void addProblema(Problema problema){
+        this.problemas.add(problema);
+    }
 }

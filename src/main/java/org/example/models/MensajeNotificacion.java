@@ -31,9 +31,16 @@ public class MensajeNotificacion implements Serializable {
     @JoinColumn(name = "tecnico_id", referencedColumnName = "id")
     private Tecnico tecnico;
 
-
-    public MensajeNotificacion resume(List<MensajeNotificacion> mensajesNotificacion){
-        return mensajesNotificacion.get(0);
+    public MensajeNotificacion(String tituloDeMensaje, String cuerpoDeMensaje, boolean enviado) {
+        this.tituloDeMensaje = tituloDeMensaje;
+        this.cuerpoDeMensaje = cuerpoDeMensaje;
+        this.enviado = enviado;
     }
+
+    /*public MensajeNotificacion resume(List<MensajeNotificacion> mensajesNotificacion){
+        return mensajesNotificacion.get(0);
+    }*/
+
+
 
 }

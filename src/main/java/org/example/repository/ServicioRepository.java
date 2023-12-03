@@ -1,8 +1,6 @@
 package org.example.repository;
 
-import org.example.DAO.ProblemaDAO;
 import org.example.DAO.ServicioDAO;
-import org.example.models.Problema;
 import org.example.models.Servicio;
 
 public class ServicioRepository {

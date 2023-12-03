@@ -37,4 +37,23 @@ public class Tecnico implements Serializable {
         this.mensajesNotificaciones = new ArrayList<MensajeNotificacion>();
         this.estimacionesTiempo = new ArrayList<TiempoResolucionPorTecnicoEstimado>();
     }
+
+    public Tecnico(String nombre, String apellido, LocalDateTime fechaDeNacimiento, boolean disponible) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaDeNacimiento = fechaDeNacimiento;
+        this.disponible = disponible;
+    }
+
+    public void addEspecialidad(Especialidad especialidad){
+        this.especialidades.add(especialidad);
+    }
+
+    public void addMensajeNotificacion(MensajeNotificacion mensaje){
+        this.mensajesNotificaciones.add(mensaje);
+    }
+
+    public void addTiempoResolucionPorTecnicoEstimado(TiempoResolucionPorTecnicoEstimado tiempoEstimado){
+        this.estimacionesTiempo.add(tiempoEstimado);
+    }
 }

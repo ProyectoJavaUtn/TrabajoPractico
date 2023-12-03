@@ -38,5 +38,11 @@ public class ClienteServicio implements Serializable {
     public ClienteServicio(LocalDateTime fechaAlta, int pagoMensual) {
         this.fechaAlta = fechaAlta;
         this.pagoMensual = pagoMensual;
+        this.incidentes = new ArrayList<Incidente>();
+    }
+
+    public void addIncidente(Incidente incidente){
+        incidente.setServicioReportado(this);
+        this.incidentes.add(incidente);
     }
 }
