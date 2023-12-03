@@ -35,6 +35,7 @@ public class Servicio implements Serializable {
     }
 
     public void addCliente(ClienteServicio cliente){
+        cliente.setServicios(this);
         this.clientes.add(cliente);
     }
 

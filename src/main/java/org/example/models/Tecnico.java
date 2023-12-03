@@ -50,10 +50,12 @@ public class Tecnico implements Serializable {
     }
 
     public void addMensajeNotificacion(MensajeNotificacion mensaje){
+        mensaje.setTecnico(this);
         this.mensajesNotificaciones.add(mensaje);
     }
 
     public void addTiempoResolucionPorTecnicoEstimado(TiempoResolucionPorTecnicoEstimado tiempoEstimado){
+        tiempoEstimado.setTecnico(this);
         this.estimacionesTiempo.add(tiempoEstimado);
     }
 }

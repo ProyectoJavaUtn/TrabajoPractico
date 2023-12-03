@@ -37,6 +37,7 @@ public class Incidente implements Serializable {
     }
 
     public void addMensajeNotificacion(MensajeNotificacion mensaje){
+        mensaje.setIncidente(this);
         this.mensajesNotificacion.add(mensaje);
     }
 

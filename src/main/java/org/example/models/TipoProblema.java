@@ -44,10 +44,12 @@ public class TipoProblema implements Serializable {
     }
 
     public void addTiempoResolucionPorTecnicoEstimado(TiempoResolucionPorTecnicoEstimado tiempoEstimado){
+        tiempoEstimado.setTipoProblema(this);
         this.tiempoResolucionPorTecnicoEstimado.add(tiempoEstimado);
     }
 
     public void addProblema(Problema problema){
+        problema.setTipoProblema(this);
         this.problemas.add(problema);
     }
 }
