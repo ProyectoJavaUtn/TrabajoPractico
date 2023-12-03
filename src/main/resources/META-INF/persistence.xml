@@ -7,6 +7,8 @@
     <persistence-unit name="JPA_PU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+        <!-- Clases de entidad -->
+        <!--<class>org.example.models.Cliente</class>-->
 
         <properties>
             <!-- Propiedades de configuración de Hibernate -->
@@ -15,7 +17,7 @@
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/tpintegrador?characterEncoding=utf8"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="root"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
         </properties>

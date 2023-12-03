@@ -28,14 +28,14 @@ public class App
        /* clienteDAO.create(luisito);*/
     }
 
-    public static void inicializacion()
+    /*public static void inicializacion()
     {
         EntityManager em = DBConfig.getEntityManager();
         EntityTransaction tx = em.getTransaction();
         tx.begin();
 
         tx.commit();
-    }
+    }*/
 
 
 
