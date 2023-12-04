@@ -1,7 +1,10 @@
 package org.example.repository;
 
 import org.example.DAO.ServicioDAO;
+import org.example.models.Cliente;
 import org.example.models.Servicio;
+
+import java.util.List;
 
 public class ServicioRepository {
     private ServicioDAO dao = new ServicioDAO();
@@ -13,4 +16,6 @@ public class ServicioRepository {
     public Servicio findOne (int id) {
         return dao.findOne(id);
     }
+
+    public List<Servicio> findAll(){return dao.findAll();}
 }

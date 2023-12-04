@@ -15,7 +15,7 @@ import java.util.List;
 public class Tecnico implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
     // private ArrayList<Especialidad> especialidadesTecnico;
     private String nombre;
