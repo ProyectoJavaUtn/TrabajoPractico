@@ -7,15 +7,12 @@
     <persistence-unit name="JPA_PU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-<<<<<<< HEAD
-=======
         <!-- Clases de entidad -->
-<<<<<<< HEAD
+
         <!--<class>org.example.models.Cliente</class>-->
-=======
+
         <!--<class>example.hibernate.pyme.models.Empleado</class>-->
->>>>>>> 30af385f55f1f8231f7e77df58736d29416f87e3
->>>>>>> 60c2b653b43bad2cf7c57c56bcaa807531f392b4
+
 
         <properties>
             <!-- Propiedades de configuración de Hibernate -->
@@ -23,22 +20,10 @@
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/tpintegrador?characterEncoding=utf8"/>
             <property name="hibernate.connection.username" value="root"/>
-<<<<<<< HEAD
-
             <property name="hibernate.connection.password" value="123456789"/>
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
-
-
-
-
-=======
-            <property name="hibernate.connection.password" value="root"/>
-<<<<<<< HEAD
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
-=======
             <property name="hibernate.hbm2ddl.auto" value="update"/>
->>>>>>> 30af385f55f1f8231f7e77df58736d29416f87e3
->>>>>>> 60c2b653b43bad2cf7c57c56bcaa807531f392b4
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
 
